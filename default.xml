@@ -11,13 +11,33 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com"
-           revision="refs/tags/android-8.0.0_r3" />
+           revision="refs/tags/android-8.0.0_r11" />
 
+  <remote  name="UN"
+           fetch="https://github.com/namdeptrai2003" />
+  
+  <remote  name="BCM"
+           fetch="https://github.com/BroadcomOreo" />
+  
+  <remote  name="NN"
+           fetch="https://github.com/ishantvivek" />
+
+  <remote  name="LOS"
+           fetch="https://github.com/LineageOS" />
+  
   <default revision="refs/heads/lineage-15.0"
            remote="github"
            sync-c="true"
            sync-j="4" />
 
+  <!-- KYLEPROXX -->
+  <project path="device/samsung/kyleproxx" name="device_kyleproxx_oreo" remote="UN" revision="lineage-15.0" />
+  <project path="kernel/samsung/kyleproxx" name="android_kernel_samsung_kyleproxx" remote="BCM" revision="o" />
+  <project path="vendor/samsung/kyleproxx" name="android_vendor_samsung_kyleproxx" remote="NN" revision="7.0" />
+  <project path="hardware/samsung" name="android_hardware_samsung" remote="LOS" revision="lineage-15.0" />
+  <project path="jack_scripts" name="jack_scripts" remote="UN" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" groups="pdk,linux,arm" clone-depth="1" remote="aosp" revision="refs/tags/android-4.4.4_r2.0.1" />
+  <project path="patches/samsung/kyleproxx" name="device_samsung_kyleproxx_patches" remote="UN" revision="master" />
   <!-- AOSP Projects -->
 
   <project path="build/make" name="LineageOS/android_build" groups="pdk" >
